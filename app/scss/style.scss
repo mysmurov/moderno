@@ -142,9 +142,14 @@
     background-color: #fff;
     color: $bg;
     cursor: pointer;
+    outline: none;
 
     &+button {
       margin-left: 5px;
+    }
+    &.mixitup-control-active{
+      background-color: $red;
+      color: #fff;
     }
   }
 }
@@ -219,6 +224,22 @@
     span{
       font-size: 14px;
       font-weight: 500;
+    }
+  }
+}
+
+.products__bottom-btn{
+  text-align: center;
+  button{
+    margin: 48px 5px 0px;
+    box-shadow: 0 1px 3px rgba(204, 216, 228, 0.75);
+    color: $bg;
+    padding: 20px 30px;
+    cursor: pointer;
+    outline: none;
+    &.mixitup-control-active{
+      background-color: $red;
+      color: #fff;
     }
   }
 }

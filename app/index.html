@@ -121,15 +121,15 @@
       </div>
       <div class="products__inner">
         <div class="products__inner-btn">
-          <button>All</button>
-          <button>WordPress</button>
-          <button>Joomla</button>
-          <button>Plugins</button>
-          <button>Component</button>
-          <button>PSD</button>
+          <button type="button" data-filter="all">All</button>
+          <button type="button" data-filter=".category-wordpress">WordPress</button>
+          <button type="button" data-filter=".category-plugins">Plugins</button>
+          <button type="button" data-filter=".category-component">Component</button>
+          <button type="button" data-filter=".category-joomla">Joomla</button>
+          <button type="button" data-filter=".category-psd">PSD</button>
         </div>
         <div class="products__inner-box">
-          <div class="product__item">
+          <div class="product__item mix category-psd" data-order="1">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -155,7 +155,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item mix category-joomla" data-order="2">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -181,7 +181,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item mix category-wordpress  category-new"  data-order="3">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -207,7 +207,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item mix category-joomla  category-new"  data-order="4">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -233,7 +233,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item  mix category-plugins" data-order="5">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -259,7 +259,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item category-component category-popular"  data-order="6">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -285,7 +285,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item mix category-component category-popular" data-order="7">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -311,7 +311,7 @@
               </div>
             </div>
           </div>
-          <div class="product__item">
+          <div class="product__item mix category-psd category-popular" data-order="8">
             <a class="product__item-img" href="#" style="background-image: url(images/content/1.jpg);">
             </a>
             <div class="product__item-content">
@@ -337,6 +337,10 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="products__bottom-btn">
+          <button type="button" data-filter=".category-new">All New Items</button>
+          <button type="button" data-filter=".category-popular">Popular Items</button>
         </div>
       </div>
     </div>
@@ -348,7 +352,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <!-- <script src="../node_modules/mixitup/dist/mixitup.min.js"></script> -->
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
