@@ -70,11 +70,14 @@
   background-size: cover;
   background-position: center;
   min-height: 532px;
-  &.page-search{
+
+  &.page-search {
     min-height: 230px;
-    .search__inner{
+
+    .search__inner {
       padding: 55px 0px 70px;
-      &-text{
+
+      &-text {
         margin-bottom: 20px;
       }
     }
@@ -550,7 +553,8 @@
 
   &__form {
     position: relative;
-    input{
+
+    input {
       border: none;
       // border: 1px solid #000000;
       background-color: #2f3c43;
@@ -561,11 +565,13 @@
       padding-left: 15px;
       padding-right: 50px;
       font-size: 14px;
-      &::placeholder{
+
+      &::placeholder {
         color: #697378;
       }
     }
-    button{
+
+    button {
       position: absolute;
       bottom: 0;
       right: 0;
@@ -574,7 +580,8 @@
       width: 43px;
       border: none;
       cursor: pointer;
-      &::before{
+
+      &::before {
         content: '\f124';
         font-family: "icomoon";
         font-size: 20px;
@@ -613,9 +620,11 @@
 
 .footer__social-link {
   margin-bottom: 40px;
-  li{
+
+  li {
     display: inline-block;
-    &+li{
+
+    &+li {
       margin-left: 7px;
     }
   }
@@ -642,37 +651,44 @@
 .link-linkedin {
   background-position: -56px -0;
 }
+
 // end footer
 // start product-page
-.product-page__inner{
+.product-page__inner {
   display: flex;
 }
-.product-page__aside{
+
+.product-page__aside {
   margin-right: 30px;
 }
-.aside__item{
+
+.aside__item {
   background-color: #fff;
   border: 1px solid #d7d7d7;
   padding: 0px 32px 32px;
   margin-bottom: 30px;
   width: 270px;
 }
-.aside__title{
+
+.aside__title {
   border-bottom: 1px solid #dde3e8;
   font-size: 20px;
   color: $bg;
   padding: 26px 0px 19px;
   @include f700;
 }
-.category__list{
+
+.category__list {
   padding-top: 10px;
-  li{
+
+  li {
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
     position: relative;
     padding-left: 20px;
-    &::before{
+
+    &::before {
       position: absolute;
       left: 0;
       content: '\f105';
@@ -681,13 +697,154 @@
       color: #8bc34a;
     }
   }
-  a{
+
+  a {
     color: $bg;
   }
-  span{
+
+  span {
     color: #90a4ae;
     margin-left: 10px;
   }
 }
 
-// end product-page
+.price-range {
+  form {
+    padding-top: 20px;
+  }
+
+  button {
+    margin-top: 55px;
+    padding: 16px 10px;
+    background-color: $green;
+    text-align: center;
+    width: 100%;
+    display: block;
+    border: none;
+    color: #fff;
+    @include f500;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+      content: "\f002";
+      font-family: "icomoon";
+      position: absolute;
+      left: 58px;
+      top: 15px;
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+
+.irs-min,
+.irs-max {
+  display: none;
+}
+
+.irs--flat .irs-line {
+  background-color: #f2f5f8;
+  height: 5px;
+}
+
+.irs--flat .irs-bar {
+  height: 5px;
+  background-color: $bg;
+}
+
+.irs--flat .irs-handle {
+  top: 19px;
+  width: 16px;
+  height: 16px;
+  border: 4px solid $green;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs-from,
+.irs-single,
+.irs-to {
+  top: 45px;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-single:before,
+.irs--flat .irs-to:before {
+  display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
+  color: #78909c;
+  font-size: 15px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.product-page__aside {
+  .product__item-img {
+    min-height: 121px;
+  }
+
+  .product__item {
+    box-shadow: none;
+  }
+  .product__item-content {
+    padding: 0;
+    min-height: 75px;
+    border-bottom: none;
+  }
+  .product__item-info{
+    padding: 0;
+    min-height: 0;
+  }
+  .product__item-title{
+    font-size: 16px;
+  }
+  .product__item-price{
+    font-size: 16px;
+  }
+  .product__item-starnum{
+    display: none;
+  }
+  .rate-star {
+    margin-right: 0;
+  }
+  .product__item-author .avatar{
+    margin-right: 9px;
+  }
+  .jq-ry-container{
+    padding: 0;
+  }
+  .product__item{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dde3e8;
+  }
+}
+.aside__product-item{
+  .product__item:last-child{
+    border:none;
+    padding-bottom: 0;
+  }
+  .product__item:first-child{
+    margin-top: 25px;
+  }
+}
+.top-sellers__link{
+  padding: 16px 10px;
+  background-color:$green;
+  display: block;
+  color: #fff;
+  @include f500;
+  text-align: center;
+}
