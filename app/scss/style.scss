@@ -878,7 +878,7 @@
     border: none;
     font-size: 16px;
     color: #90a4ae;
-
+    outline: none;
     &.active {
       color: $green;
     }
@@ -969,5 +969,10 @@ button.icon-unsorted {
       background-color: $red;
       color: #fff;
     }
+  }
+}
+.product__item{
+  &.list{
+    max-width: 100%;
   }
 }
