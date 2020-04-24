@@ -971,8 +971,15 @@ button.icon-unsorted {
     }
   }
 }
-.product__item{
-  &.list{
-    max-width: 100%;
+
+.product-page__content{
+  .product__item{
+    &.list{
+      max-width: 100%;
+      .product__item-img{
+        width: 240px;
+        float: left;
+      }
+    }
   }
 }
