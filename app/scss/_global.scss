@@ -117,3 +117,16 @@ body {
     }
   }
 }
+
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: '\f105';
+    font-family: 'icomoon';
+    color: $green;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+  }
+}

@@ -33,7 +33,8 @@
   background-color: $green;
 }
 
-.header__btn-register {
+.header__btn-register,
+.header__btn-logout {
   background-color: $red;
   margin-left: 7px;
 }
@@ -61,6 +62,238 @@
     color: #fff;
     font-size: 14px;
   }
+}
+
+.header__circle {
+  &.active{
+    display: block;
+  }
+  display: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  position: relative;
+
+  // &+.header__circle {
+  //   margin-left: 15px;
+  // }
+
+  span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    right: -6px;
+    top: -6px;
+    font-size: 11px;
+    color: #fff;
+    font-family: Roboto;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+}
+
+.header__box{
+  display: flex;
+  align-items: center;
+}
+
+.header__btn-login--off{
+  display: none;
+}
+
+.header__btn-logout{
+  display: none;
+  &.header__btn-login--on{
+    display: block;
+  }
+}
+
+
+
+.notification {
+  span {
+    background-color: $yellow;
+  }
+}
+
+.message {
+  span {
+    background-color: $tomato;
+  }
+}
+
+.basket {
+  span {
+    background-color: $green;
+  }
+}
+
+.user{
+  margin-left: 20px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '\f107';
+    font-family: "icomoon";
+    right: 0;
+    top: 2px;
+    font-size: 16px;
+    color: #707070;
+    
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__images{
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+  &__info{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__name{
+    @include f500;
+    color: #222
+  }
+  &__money{
+    color: $green;
+    font-size: 14px;
+  }
+}
+
+
+.user__menu{
+  top: 69px;
+  left: 20px;
+  position: absolute;
+  background-color: #ffffff;
+  border: 0px solid rgb(204, 204, 204);
+  padding: 0px 20px;
+  width: 158px;
+  transition: all .3s;
+  height: 0px;
+  overflow: hidden;
+  a{
+    font-size: 12px;
+    color: #546e7a;
+    margin-bottom: 15px;
+  }
+}
+.circle__menu{
+  position: absolute;
+  width: 268px;
+}
+.user__box,
+.basket__box,
+.notification__box,
+.message__box{
+  position: relative;
+  height: 90px;
+  margin-top: 40px;
+  &:hover{
+    .user__menu{
+      height: auto;
+      border-width: 1px;
+      padding: 20px;
+      overflow: auto;
+    }
+  }
+}
+
+.circle__menu{
+  border-top: 1px solid #e0e0e0;
+  top: 62px;
+  right: -10px;
+  height: 0;
+  overflow: hidden;
+  transition: all .3s;
+}
+
+.basket__box,
+.notification__box,
+.message__box{
+  margin-top: 54px;
+  margin-left: 15px;
+  &:hover{
+    .circle__menu{
+      overflow: auto;
+      height: auto;
+    }
+  }
+}
+
+.circle__item{
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  padding: 23px;display: flex;
+  align-items: center;
+}
+.circle__images{
+  margin-right: 15px;
+}
+.circle__info-name {
+  @include f500;
+  color: $bg;
+}
+.circle__info-thema {
+  color: $green;
+  font-size: 12px;
+}
+.circle__info-price {
+  @include f500;
+  color: #000;
+  font-size: 16px;
+}
+
+.basket__summ{
+  padding: 16px 17px 12px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  
+}
+.basket__title{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-right: 22px;
+  @include f700;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: $bg;
+}
+.basket__btn{
+  @include f700;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 5px;
+  background-color: $green;
+  text-align: center;
+  width: 100px;
+}
+.basket__btn-checkout{
+  width: 120px;
+  margin-left: 6px;
+  background-color: $red;
 }
 
 // end block header
@@ -879,6 +1112,7 @@
     font-size: 16px;
     color: #90a4ae;
     outline: none;
+
     &.active {
       color: $green;
     }
@@ -948,24 +1182,29 @@ button.icon-unsorted {
 
 .pagination__list {
   margin-top: 90px;
+
   li {
     display: inline-block;
-    & + li{
+
+    &+li {
       margin-left: 6px;
     }
   }
+
   a,
-  span{
+  span {
     width: 43px;
     height: 38px;
     box-shadow: 0 1px 2px rgba(205, 214, 222, 0.75);
     background-color: #fff;
     font-size: 16px;
     @include f500;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     color: $bg;
-    &.active{
+
+    &.active {
       background-color: $red;
       color: #fff;
     }
@@ -973,30 +1212,34 @@ button.icon-unsorted {
 }
 
 
-.product__item-text{
+.product__item-text {
   display: none;
 }
 
-.product__item-price{
-  span{
+.product__item-price {
+  span {
     display: none;
   }
 }
-.product__item-list{
+
+.product__item-list {
   display: none;
+
   .icon-comment-o,
-  .icon-heart-o{
+  .icon-heart-o {
     font-size: 12px;
     color: #b0bec5;
     display: inline-block;
     padding-left: 50px;
     border-left: 1px solid #aeb4bb;
     position: relative;
-    span{
+
+    span {
       @include f500;
       color: $bg;
     }
-    &::before{
+
+    &::before {
       font-size: 16px;
       color: $green;
       position: absolute;
@@ -1004,47 +1247,56 @@ button.icon-unsorted {
       top: 0;
     }
   }
-  .icon-comment-o{
+
+  .icon-comment-o {
     padding-right: 30px;
     top: -2px;
   }
 }
 
-.product-page__content{
-  .product__item{
-    &.list{
+.product-page__content {
+  .product__item {
+    &.list {
       max-width: 100%;
-      .product__item-img{
+
+      .product__item-img {
         width: 240px;
         float: left;
         min-height: 100%;
       }
-      .product__item-text{
+
+      .product__item-text {
         display: block;
         font-size: 14px;
         color: #70838d;
         margin-top: 15px;
         margin-bottom: 5px;
       }
-      .product__item-price{
+
+      .product__item-price {
         font-size: 30px;
-        span{
+
+        span {
           display: block;
           font-size: 13px;
           color: #aeb4bb;
           margin-top: 47px;
         }
       }
-      .product__item-name{
+
+      .product__item-name {
         max-width: 480px;
       }
-      .product__item-content{
+
+      .product__item-content {
         padding-top: 23px;
       }
-      .product__item-list{
+
+      .product__item-list {
         display: block;
       }
-      .product__item-star{
+
+      .product__item-star {
         margin-left: auto;
         margin-right: 30px;
       }

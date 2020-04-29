@@ -37,6 +37,8 @@ $(function () {
     $(".icon-th-list").removeClass("active");
   });
 
+  new WOW().init();
+  
   var mixer = mixitup('.products__inner-box');
 
 });

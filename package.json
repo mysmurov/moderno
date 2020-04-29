@@ -9,6 +9,7 @@
   "author": "Sergey Smurov",
   "license": "ISC",
   "devDependencies": {
+    "animate.css": "^3.7.2",
     "browser-sync": "^2.26.7",
     "css-min": "^1.0.0",
     "cssmin": "^0.4.3",
@@ -24,6 +25,7 @@
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.5",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
   }
 }
