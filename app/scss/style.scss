@@ -233,19 +233,38 @@
   margin-top: 54px;
   margin-left: 15px;
   &:hover{
+    .header__circle::before{
+      color: $bg;
+    }
     .circle__menu{
       overflow: auto;
       height: auto;
+    }
+    .circle__item{
+      padding: 23px;
+      border-width: 1px;
     }
   }
 }
 
 .circle__item{
   background-color: #fff;
-  border: 1px solid #e0e0e0;
+  border: 0 solid #e0e0e0;
   border-top: none;
-  padding: 23px;display: flex;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  padding: 0 23px;
+  transition: all .3s;
+  display: flex;
   align-items: center;
+  position: relative;
+  &::before{
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    font-size: 16px;
+    color: #b0bec5;
+  }
 }
 .circle__images{
   margin-right: 15px;
@@ -262,6 +281,11 @@
   @include f500;
   color: #000;
   font-size: 16px;
+}
+
+.circle__info-date{
+  font-size: 10px;
+  color: #707070;
 }
 
 .basket__summ{
@@ -295,6 +319,27 @@
   margin-left: 6px;
   background-color: $red;
 }
+.notification__menu,
+.message__menu{
+  .circle__images{
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+  }
+}
+.circle__info{
+  line-height: 18px;
+}
+
+.icons-color{
+  &::before{
+    color: $tomato;
+  }
+}
+
+
 
 // end block header
 // start block search
