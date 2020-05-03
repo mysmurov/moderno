@@ -4,6 +4,9 @@
 
 
 // start block header
+.header{
+  background-color: #fff;
+}
 .header__top-inner {
   display: flex;
   justify-content: space-between;
@@ -118,6 +121,14 @@
     display: block;
   }
 }
+//обратить внимание при косяках с кнопками
+.header__btn-login,
+.header__btn-register{
+  &.header__btn-login--on{
+    display: block;
+  }
+}
+
 
 
 
@@ -134,13 +145,13 @@
 }
 
 .basket {
+  margin-right: 20px;
   span {
     background-color: $green;
   }
 }
 
 .user{
-  margin-left: 20px;
   margin-right: 25px;
   padding-right: 20px;
   position: relative;
@@ -200,6 +211,7 @@
 .circle__menu{
   position: absolute;
   width: 268px;
+  z-index: 1;
 }
 .user__box,
 .basket__box,
@@ -337,6 +349,11 @@
   &::before{
     color: $tomato;
   }
+}
+
+.header__btn-menu,
+.header__btn{
+  display: none;
 }
 
 
