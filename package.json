@@ -9,6 +9,7 @@
   "author": "Sergey Smurov",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^3.7.2",
     "browser-sync": "^2.26.7",
     "css-min": "^1.0.0",

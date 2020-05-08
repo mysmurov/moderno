@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -150,7 +150,7 @@
                     </ul>
                   </div>
                 </div>
-                <a class="header__btn header__btn-login header__btn-login--on" href="#">Login</a>
+                <a class="header__btn header__btn-login header__btn-login--on" data-fancybox data-src="#modal" href="javascript:;">Login</a>
                 <a class="header__btn header__btn-logout header__btn-login--off" href="#">Logout</a>
                 <a class="header__btn header__btn-register header__btn-login--on" href="#">Register</a>
               </div>
@@ -1074,6 +1074,22 @@
         </div>
       </div>
     </footer>
+  </div>
+  <div id="modal">
+    <div class="login__title">
+      Login
+    </div>
+    <form>
+      <label>
+        <input type="text" placeholder="Name" required>
+      </label>
+      <label>
+        <input type="text" placeholder="Password" required>
+      </label>
+      <button type="submit">submit</button>
+      <a href="#">Creat An Account?</a>
+      <a href="#">Lost Password?</a>
+    </form>
   </div>
 
 
