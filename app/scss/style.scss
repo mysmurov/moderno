@@ -1910,13 +1910,15 @@ button.icon-unsorted {
 
 // end product-one
 // start 404
-.page-404__wrapper {
+.page-404__wrapper,
+.about__wrapper {
   border: 1px solid #d7d7d7;
   background-color: #fff;
   margin-bottom: 150px;
 }
 
-.page-404__head {
+.page-404__head,
+.about__head {
   font-size: 24px;
   color: #444;
   @include f500;
@@ -2003,6 +2005,31 @@ button.icon-unsorted {
 }
 
 //end 404
+// start about
+.about {
+  &__inner {
+    padding: 0px 50px;
+  }
+
+  &__box {
+    h3 {
+      color: #444444;
+      font-size: 20px;
+      @include f700;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #707070;
+      margin-bottom: 40px;
+      line-height: 24px;
+    }
+  }
+}
+
+// end about
 
 
 
