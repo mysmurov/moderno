@@ -383,12 +383,118 @@
 .header__btn {
   display: none;
 }
+
 // end header
 // start modal
-#modal{
+#modal {
   background-color: $green;
   max-width: 730px;
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
 }
+
+.login__wrapper {
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      font-size: 14px;
+      color: #fff;
+      font-family: "icomoon";
+      left: 18px;
+      top: 9px;
+    }
+  }
+
+  .login__label-name::before {
+    content: "\f007";
+  }
+
+  .login__label-pass {
+    &::before {
+      content: "\f023";
+    }
+  }
+
+  input {
+    height: 43px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #76ae36;
+    color: #fff;
+    padding-left: 40px;
+    display: block;
+    width: 100%;
+
+    &::placeholder {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+
+  button {
+    margin-top: 19px;
+    padding: 18px 0 16px;
+    background-color: #fff;
+    width: 140px;
+    border: none;
+    margin-right: 10px;
+    text-transform: uppercase;
+    @include f700;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 2px 2px rgba(118, 174, 54, 0.75);
+  }
+}
+
+.login__title {
+  @include f700;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+
+.creat-acc {
+  margin-top: 19px;
+  padding: 15px 0px 15px;
+  text-align: center;
+  width: 246px;
+  background-color: #76ae36;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+
+  &::before {
+    content: "\f044";
+    top: 15px;
+    left: 35px;
+    font-family: "icomoon";
+    padding-right: 11px;
+  }
+}
+
+.lost-pass {
+  display: block;
+  margin-top: 27px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.fancybox-button svg {
+  color: #fff;
+}
+
 // end modal
 // start search
 .search {
@@ -1712,66 +1818,72 @@ button.icon-unsorted {
     font-size: 20px;
     text-align: center;
     position: relative;
-    &::before{
+
+    &::before {
       position: absolute;
       top: 6px;
       left: 0;
       right: 0;
     }
+
     &+li {
       margin-left: 4px;
     }
   }
 }
-  .author {
-    &__awards-list {}
-  }
 
-  .icon-meh-o {
-    width: 34px;
-    height: 37px;
-    background-image: url(../images/awardas/orang.png);
-  }
-  
+.author {
+  &__awards-list {}
+}
 
-  .icon-pagelines {
+.icon-meh-o {
+  width: 34px;
+  height: 37px;
+  background-image: url(../images/awardas/orang.png);
+}
 
-    width: 34px;
-    height: 37px;
-    background-image: url(../images/awardas/red.png);
-  }
 
-  .icon-bolt {
+.icon-pagelines {
 
-    width: 34px;
-    height: 37px;
-    background-image: url(../images/awardas/blue.png);
-  }
+  width: 34px;
+  height: 37px;
+  background-image: url(../images/awardas/red.png);
+}
 
-  .icon-foursquare {
+.icon-bolt {
 
-    width: 34px;
-    height: 37px;
-    background-image: url(../images/awardas/green.png);
-  }
+  width: 34px;
+  height: 37px;
+  background-image: url(../images/awardas/blue.png);
+}
 
-  .icon-cny {
+.icon-foursquare {
 
-    width: 34px;
-    height: 37px;
-    background-image: url(../images/awardas/grey.png);
-  }
-.aside__item-sales{
+  width: 34px;
+  height: 37px;
+  background-image: url(../images/awardas/green.png);
+}
+
+.icon-cny {
+
+  width: 34px;
+  height: 37px;
+  background-image: url(../images/awardas/grey.png);
+}
+
+.aside__item-sales {
   padding-top: 23px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
-  span{
+
+  span {
     padding-right: 14px;
     font-size: 20px;
     @include f700;
     color: $bg;
-    &::before{
+
+    &::before {
       content: "\f07a";
       font-family: "icomoon";
       color: #a6b5bb;
@@ -1779,20 +1891,118 @@ button.icon-unsorted {
     }
   }
 }
-.aside__item.sales-number{
+
+.aside__item.sales-number {
   padding-bottom: 25px;
 }
-.information__line{
+
+.information__line {
   font-size: 14px;
   color: #70838d;
   margin-top: 20px;
   line-height: 18px;
-  span{
+
+  span {
     @include f500;
     color: #263238;
   }
 }
 
+// end product-one
+// start 404
+.page-404__wrapper {
+  border: 1px solid #d7d7d7;
+  background-color: #fff;
+  margin-bottom: 150px;
+}
+
+.page-404__head {
+  font-size: 24px;
+  color: #444;
+  @include f500;
+  padding: 23px 27px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.page-404__inner {
+  background-color: #8bc34a;
+  position: relative;
+  color: #fff;
+  height: 713px;
+}
+
+.page-404__404 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 300px;
+  color: #fffefe;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  padding-left: 256px;
+  line-height: 300px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/dude.png);
+    width: 150px;
+    height: 292px;
+    margin-left: 21px;
+    top: 64px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/dude_down.png);
+    background-repeat: no-repeat;
+    width: 157px;
+    height: 20px;
+    margin-left: 21px;
+    top: 345px;
+    right: 213px;
+
+  }
+}
+
+.page-404__title {
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 6px;
+}
+
+.page-404__text {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 530px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  margin-bottom: 56px;
+  font-size: 18px;
+}
+
+.page-404__link {
+  margin-top: 56px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 20px 30px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 100px;
+
+  // max-width: 1168px;
+  background-color: $green;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+//end 404
 
 
 
@@ -1800,33 +2010,5 @@ button.icon-unsorted {
 
 
 
-
-
-
-
-
-
-  // end product-one
-
-
-
-
-
-
-
-
-  //next only import media
-  @import 'media';
-
-
-
-
-
-  // &::before {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   color: #fff;
-  //   font-size: 14px;
-  // }
+//next only import media
+@import 'media';
